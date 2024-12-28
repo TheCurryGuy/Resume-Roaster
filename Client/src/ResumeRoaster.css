@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  margin: auto;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-roaster {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 2.2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.resume-roaster h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 1.8rem;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1px;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.upload-form label {
+  font-size: 1.3rem;
+  color: #94a3b8;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  white-space: nowrap; 
+  overflow: hidden; 
+}
+
+.upload-form input[type="file"] {
+  width: 72%;
+  max-width: 1000px;
+  padding: 1.5rem;
+  border: 2px dashed rgba(56, 189, 248, 0.8);
+  border-radius: 15px;
+  background: rgba(56, 189, 248, 0.05);
+  color: #94a3b8;
+  font-weight: 500;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  flex-direction: column;
+  display: flex; 
+  
+}
+
+.upload-form input[type="file"]:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: #38bdf8;
+}
+
+.upload-form input[type="file"]:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
+}
+
+.upload-form input[type="file"]::file-selector-button {
+  display: none; 
+}
+
+.upload-form input[type="file"]::before {
+  content: "Drag and drop your resume here or click to upload";
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-align: center;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+
+.upload-form input[type="file"]:hover::before {
+  color: #38bdf8;
+}
+
+.upload-form input[type="file"]:focus::before {
+  color: #0ea5e9;
+}
+
+.upload-form button {
+  padding: 0.9rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.upload-form button:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.upload-form button:hover:not(:disabled) {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+}
+
+.error {
+  color: #f87171;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: rgba(248, 113, 113, 0.1);
+  box-shadow: 0 3px 6px rgba(248, 113, 113, 0.2);
+}
+
+.roast-result {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #dbe0e6;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.roast-result h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 1.2rem;
+}
+
+.roast-result p {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+  white-space: pre-wrap;
+  text-align: justify;
+}
+
+.roast-result button{
+  padding: 0.9rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+footer a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+ 
+  .resume-roaster {
+  
+    width: 18rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+
+  }
+
+  .upload-form input[type="file"] {
+    width: 100%;
+    max-width: 1000px;
+    height: 4vh;
+    color: rgba(255, 255, 255, 0.0001);
+    padding: 2vh;
+  }
+
+  .upload-form input[type="file"]::before {
+    content: "Upload your resume here";
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-align: center;
+    background: transparent;
+    padding: 2vh;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+  }
+
+  .upload-form button {
+    font-size: 1rem; 
+  }
+
+  .resume-roaster h1 {
+    margin-top: 0;
+    font-size: 1.5rem; 
+    margin-bottom: 1rem;
+  }
+  .upload-form label {
+    font-size: 1rem;
+    color: #94a3b8;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    
+  }
+  .upload-form{
+    padding-left: auto;
+  }
+
+ 
+  .error {
+    font-size: 1rem; 
+  }
+
+  .roast-result {
+    margin-top: 0rem;
+    font-size: 0.9rem; 
+    width: 21rem;
+    height: 21rem;
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    padding: 1.1rem; 
+  }
+  
+
+  .roast-result h2 {
+    font-size: 1.2rem; 
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .roast-result button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem; 
+  }
+}
