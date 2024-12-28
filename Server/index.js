@@ -8,7 +8,6 @@ const Groq = require("groq-sdk");
 dotenv.config();
 
 const app = express();
-const port = 3000;
 
 app.use(cors({
   origin: 'http://localhost:5173',
@@ -37,7 +36,7 @@ Roast Guidelines:
 - Remember the response you will be giving should be a single paragraph only nothing else, One paragraph only which will be roasting the entire resume
 - Rip apart every weak point, vague phrase, or generic line
 - Make it darkly funny but straightforward, using basic, raw English
-- Avoid sugarcoating anything—be blunt and ruthless
+- Avoid sugarcoating anything—be blunt and ruthless 
 - Keep it under 300 words
 - Drop sarcastic career advice that stings but makes sense
 `;
@@ -93,6 +92,6 @@ app.post("/roast", upload.single("resume"), async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log("listening on port: " + port);
+app.listen(3000, () => {
+  console.log("listening on port: ");
 });
