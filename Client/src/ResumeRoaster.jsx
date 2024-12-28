@@ -30,7 +30,7 @@ const ResumeRoaster = () => {
       setIsLoading(true);
       setError("");
 
-      const response = await axios.post("http://localhost:3000/roast", formData, {
+      const response = await axios.post("https://resume-roaster-server.vercel.app/roast", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
